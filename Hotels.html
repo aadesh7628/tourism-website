@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotels - Wanderlustways</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&family=PT+Sans+Narrow&family=Rubik:wght@300&display=swap"
+        rel="stylesheet">
+    <link rel="website icon" href="./images/wb logo.png">
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            font-family: 'Fira Sans', sans-serif;
+            font-family: 'PT Sans Narrow', sans-serif;
+            font-family: 'Rubik', sans-serif;
+            background-image: url("https://images.unsplash.com/photo-1524312966005-030e396636fd?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+        }
+
+        .navbar {
+            width: 100%;
+            height: 74px;
+            z-index: 3;
+        }
+
+        .navbar li a img {
+            width: 200px;
+            height: auto;
+        }
+
+        #nav {
+            position: fixed;
+            top: 0%;
+            background-color: white;
+            box-shadow: 4px 4px 12px grey;
+        }
+
+        .navbar li {
+            display: inline;
+            margin-left: 20px;
+        }
+
+        #nav li a {
+            text-decoration: none;
+            color: black;
+            margin: 10px;
+            text-transform: uppercase;
+        }
+
+        #nav li :hover {
+            /* color: #fd8542; */
+            color: red;
+        }
+
+        .container {
+            width: 80%;
+            height: auto;
+            /* border: 1px solid black; */
+            margin-left: 140px;
+            margin-top: 100px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .box {
+            border: 1px solid rgb(227, 219, 219);
+            /* border-radius: 8px; */
+            box-shadow: 2px 2px 5px grey;
+            background-color: white;
+            width: 340px;
+            height: auto;
+            margin-bottom: 40px;
+        }
+
+        .box:nth-child(n+11) {
+            visibility: hidden;
+        }
+
+        .image img {
+            width: 341px;
+            height: 230px;
+        }
+
+        .heading,
+        .loc,
+        .ratings,
+        .fac,
+        .float {
+            padding-left: 12px;
+            padding-right: 12px;
+        }
+
+        .heading::first-letter {
+            color: red;
+        }
+
+        .loc,
+        .fac,
+        .price {
+            font-size: 14px;
+        }
+
+        .ratings p {
+            font-size: 12px;
+        }
+
+        .checked {
+            font-size: 10px;
+            color: #ab3030;
+        }
+
+        .fa-star {
+            font-size: 10px;
+        }
+
+        .float .price {
+            float: left;
+            padding-top: 5px;
+        }
+
+        .float .price :nth-child(1) {
+            color: green;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .float .btn {
+            float: right;
+        }
+
+        .btn button {
+            width: 100px;
+            height: 30px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 4px;
+            background-image: linear-gradient(to right, #ff433a, #ff577c);
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .btn button a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .fa-chevron-right {
+            font-size: 12px;
+        }
+
+        .btn button:hover{
+            transform: scale(1.1);
+        }
+
+        .footer {
+            width: 100%;
+            height: 27vh;
+            border-top: 1px solid rgb(182, 179, 179);
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 18px;
+            background-color: white;
+        }
+
+        .box4 img {
+            margin-top: 68px;
+        }
+
+        .box4 p {
+            font-size: 12px;
+        }
+
+        .box4 a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .box4 a:hover {
+            color: red;
+        }
+
+        .box4 h4 a {
+            color: rgb(31, 118, 217);
+        }
+
+        .fa-facebook{
+            position: fixed;
+            right: 4px;
+            top: 400px;
+            font-size: 27px;
+            color: black;
+            cursor: pointer;
+        }
+
+        .fa-instagram{
+            position: fixed;
+            right: 4px;
+            top: 440px;
+            font-size: 27px;
+            color: black;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar" id="nav">
+        <ul>
+            <li><a href="#"><img src="./images/logo.png" alt="err"></a></li>
+            <li><a href="./home.html">Home</a></li>
+            <li><a href="./Heritage.html">Heritage Places</a></li>
+            <li><a href="./Gallery.html">Gallery</a></li>
+            <!-- <li><a href="#">Feedback</a></li> -->
+            <li><a href="./Hotels.html">Hotels</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <div class="box">
+            <div class="heading">
+                <h3>1. Sai Inn Mysore</h3>
+            </div>
+            <div class="image">
+                <img src="https://q-xx.bstatic.com/xdata/images/hotel/max500/340193483.jpg?k=6367cfc5aac2dcba05668149280e892c6f909d9c83730f5bb06bec0e8056120f&o="
+                    alt="err">
+            </div>
+            <div class="loc">
+                <p><i class="fa-solid fa-location-dot" style="color: #ab3030;"></i>&nbsp;Mysore City Centre 1.1 kms from
+                    Sri
+                    Ramakrishna Ashrama</p>
+            </div>
+            <div class="ratings">
+                <p># 1 hotel in Mysore</p>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+            </div>
+            <div class="fac">
+                <p>Facilities: Parking , Wifi , Bar , Food</p>
+            </div>
+            <div class="float">
+                <div class="price">
+                    <span>&#8377;1,348</span>&nbsp;<span>onwards</span>
+                </div>
+                <div class="btn">
+                    <button><a href="./Form.html">Deal&nbsp;<i class="fa-solid fa-chevron-right"
+                                style="color: #f7f7f7;"></i></a></button>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="heading">
+                <h3>2. Radisson Blu Plaza Hotel Mysore</h3>
+            </div>
+            <div class="image">
+                <img src="https://www.holidify.com/images/cmsuploads/compressed/253922697_20220223172839.jpg" alt="err">
+            </div>
+            <div class="loc">
+                <p><i class="fa-solid fa-location-dot" style="color: #ab3030;"></i>&nbsp;Mysore City Centre 500 m from
+                    Sri Chamarajendra Zoological Gardens</p>
+            </div>
+            <div class="ratings">
+                <p># 2 hotel in Mysore</p>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+            </div>
+            <div class="fac">
+                <p>Facilities: Parking , Bar , Wifi , Pool , Food</p>
+            </div>
+            <div class="float">
+                <div class="price">
+                    <span>&#8377;9,100</span>&nbsp;<span>onwards</span>
+                </div>
+                <div class="btn">
+                    <button><a href="./Form.html">Deal&nbsp;<i class="fa-solid fa-chevron-right"
+                                style="color: #f7f7f7;"></i></a></button>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="heading">
+                <h3>3. SAFARI QUEST</h3>
+            </div>
+            <div class="image">
+                <img src="https://q-xx.bstatic.com/xdata/images/hotel/max500/420937548.jpg?k=15fddb7ccc0a08be0242c3d07139f84d787313ee3c94295ddea26891a03abfde&o="
+                    alt="err">
+            </div>
+            <div class="loc">
+                <p><i class="fa-solid fa-location-dot" style="color: #ab3030;"></i>&nbsp; Mysore City Centre 100 m from
+                    Safari <br> Quest</p>
+            </div>
+            <div class="ratings">
+                <p># 3 hotel in Mysore</p>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+            </div>
+            <div class="fac">
+                <p>Facilities: Parking , Wifi , Bar , Food</p>
+            </div>
+            <div class="float">
+                <div class="price">
+                    <span>&#8377;3,000</span>&nbsp;<span>onwards</span>
+                </div>
+                <div class="btn">
+                    <button><a href="./Form.html">Deal&nbsp;<i class="fa-solid fa-chevron-right"
+                                style="color: #f7f7f7;"></i></a></button>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="heading">
+                <h3>4. Soho Boutique Hotel</h3>
+            </div>
+            <div class="image">
+                <img src="https://q-xx.bstatic.com/xdata/images/hotel/max500/359536012.jpg?k=fcd8aeb4a26bdf5419433c8bdee4bafdd98eecdf601c9892458bd9e529c6744e&o="
+                    alt="err">
+            </div>
+            <div class="loc">
+                <p><i class="fa-solid fa-location-dot" style="color: #ab3030;"></i>&nbsp; Mysore City Centre 800 m from
+                    Mysore City Junction Station</p>
+            </div>
+            <div class="ratings">
+                <p># 4 hotel in Mysore</p>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+            </div>
+            <div class="fac">
+                <p>Facilities: Parking , Wifi , Food</p>
+            </div>
+            <div class="float">
+                <div class="price">
+                    <span>&#8377;2,500</span>&nbsp;<span>onwards</span>
+                </div>
+                <div class="btn">
+                    <button><a href="./Form.html">Deal&nbsp;<i class="fa-solid fa-chevron-right"
+                                style="color: #f7f7f7;"></i></a></button>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="heading">
+                <h3>5. Hotel Pai Vista</h3>
+            </div>
+            <div class="image">
+                <img src="https://www.holidify.com/images/cmsuploads/compressed/167819560_20220223171140.jpg" alt="err">
+            </div>
+            <div class="loc">
+                <p><i class="fa-solid fa-location-dot" style="color: #ab3030;"></i>&nbsp;Mysore City Centre 300 m from
+                    Vyshak <br>Inn </p>
+            </div>
+            <div class="ratings">
+                <p># 5 hotel in Mysore</p>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+            </div>
+            <div class="fac">
+                <p>Facilities: Parking , Bar , Wifi , Pool , Food</p>
+            </div>
+            <div class="float">
+                <div class="price">
+                    <span>&#8377;4,000</span>&nbsp;<span>onwards</span>
+                </div>
+                <div class="btn">
+                    <button><a href="./Form.html">Deal&nbsp;<i class="fa-solid fa-chevron-right"
+                                style="color: #f7f7f7;"></i></a></button>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="heading">
+                <h3>6. Aadya Elite</h3>
+            </div>
+            <div class="image">
+                <img src="https://q-xx.bstatic.com/xdata/images/hotel/max500/216642861.jpg?k=7f843c1079580a8eceeca2cf8c52a6f128a951af6d7891591f532b0e1f732d36&o="
+                    alt="err">
+            </div>
+            <div class="loc">
+                <p><i class="fa-solid fa-location-dot" style="color: #ab3030;"></i>&nbsp;Mysore City Centre 2.0 kms from
+                    Karnataka State Open University</p>
+            </div>
+            <div class="ratings">
+                <p># 6 hotel in Mysore</p>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+            </div>
+            <div class="fac">
+                <p>Facilities: Parking , Wifi , Food</p>
+            </div>
+            <div class="float">
+                <div class="price">
+                    <span>&#8377;2,100</span>&nbsp;<span>onwards</span>
+                </div>
+                <div class="btn">
+                    <button><a href="./Form.html">Deal&nbsp;<i class="fa-solid fa-chevron-right"
+                                style="color: #f7f7f7;"></i></a></button>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="heading">
+                <h3>7. Silent Shores Resort & Spa</h3>
+            </div>
+            <div class="image">
+                <img src="https://www.holidify.com/images/cmsuploads/compressed/87728983_20220223170811.jpg" alt="err">
+            </div>
+            <div class="loc">
+                <p><i class="fa-solid fa-location-dot" style="color: #ab3030;"></i>&nbsp;Mysore City Centre 5.6 kms from
+                    Karnataka State Open University</p>
+            </div>
+            <div class="ratings">
+                <p># 7 hotel in Mysore</p>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+            </div>
+            <div class="fac">
+                <p>Facilities: Parking , Bar , Wifi , Pool , Food</p>
+            </div>
+            <div class="float">
+                <div class="price">
+                    <span>&#8377;7,249</span>&nbsp;<span>onwards</span>
+                </div>
+                <div class="btn">
+                    <button><a href="./Form.html">Deal&nbsp;<i class="fa-solid fa-chevron-right"
+                                style="color: #f7f7f7;"></i></a></button>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="heading">
+                <h3>8. Shine Residency</h3>
+            </div>
+            <div class="image">
+                <img src="https://www.holidify.com/images/cmsuploads/compressed/364591534_20230818134330.jpg" alt="err">
+            </div>
+            <div class="loc">
+                <p><i class="fa-solid fa-location-dot" style="color: #ab3030;"></i>&nbsp; Mysore City Centre 1.7 kms
+                    from GRS Fantasy Park</p>
+            </div>
+            <div class="ratings">
+                <p># 8 hotel in Mysore</p>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+            </div>
+            <div class="fac">
+                <p>Facilities: Parking , Bar , Wifi , Food</p>
+            </div>
+            <div class="float">
+                <div class="price">
+                    <span>&#8377;1,512</span>&nbsp;<span>onwards</span>
+                </div>
+                <div class="btn">
+                    <button><a href="./Form.html">Deal&nbsp;<i class="fa-solid fa-chevron-right"
+                                style="color: #f7f7f7;"></i></a></button>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="heading">
+                <h3>9. Red House Yoga Center</h3>
+            </div>
+            <div class="image">
+                <img src="https://www.holidify.com/images/cmsuploads/compressed/111817653_20220223175140.jpg" alt="err">
+            </div>
+            <div class="loc">
+                <p><i class="fa-solid fa-location-dot" style="color: #ab3030;"></i>&nbsp;Mysore City Centre 1.1 kms from
+                    Sri Ramakrishna Ashrama</p>
+            </div>
+            <div class="ratings">
+                <p># 9 hotel in Mysore</p>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+            </div>
+            <div class="fac">
+                <p>Facilities: Parking , Wifi</p>
+            </div>
+            <div class="float">
+                <div class="price">
+                    <span>&#8377;500</span>&nbsp;<span>onwards</span>
+                </div>
+                <div class="btn">
+                    <button><a href="./Form.html">Deal&nbsp;<i class="fa-solid fa-chevron-right"
+                                style="color: #f7f7f7;"></i></a></button>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="heading">
+                <h3>10. Regenta Central Herald Mysore</h3>
+            </div>
+            <div class="image">
+                <img src="https://www.holidify.com/images/cmsuploads/compressed/129025060_20220223174928.jpg" alt="err">
+            </div>
+            <div class="loc">
+                <p><i class="fa-solid fa-location-dot" style="color: #ab3030;"></i>&nbsp;Mysore City Centre 1.7 kms from
+                    Sri Ramakrishna Ashrama</p>
+            </div>
+            <div class="ratings">
+                <p># 10 hotel in Mysore</p>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+            </div>
+            <div class="fac">
+                <p>Facilities: Parking , Wifi</p>
+            </div>
+            <div class="float">
+                <div class="price">
+                    <span>&#8377;5,249</span>&nbsp;<span>onwards</span>
+                </div>
+                <div class="btn">
+                    <button><a href="./Form.html">Deal&nbsp;<i class="fa-solid fa-chevron-right"
+                                style="color: #f7f7f7;"></i></a></button>
+                </div>
+            </div>
+        </div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+    <div class="social">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-instagram"></i>
+    </div>
+    <div class="footer">
+        <div class="box4">
+            <img src="./images/logo.png" alt="err" width="250px">
+        </div>
+        <div class="box4">
+            <h4>Explore Wanderlustways</h4>
+            <h5><a href="./home.html">Home</a></h5>
+            <h5><a href="./Heritage.html">Heritage Places</a></h5>
+            <h5><a href="./Gallery.html">Gallery</a></h5>
+            <h5><a href="./Hotels.html">Hotels</a></h5>
+        </div>
+        <div class="box4">
+            <h4>Need help with tour packages?</h4>
+            <h4><a href="./Form.html">Fill this form to get a callback</a></h4>
+            <p><i class="fa-solid fa-phone" style="color: #e63d3d;"></i>&nbsp;&nbsp;022-48934191</p>
+            <p><i class="fa-solid fa-envelope" style="color: #e63d3d;"></i>&nbsp;&nbsp;hello@Wanderlustways.com</p>
+            <p><i class="fa-solid fa-calendar" style="color: #e63d3d;"></i>&nbsp;&nbsp;Mon-Fri: 10AM - 7PM (IST)</p>
+            <p><i class="fa-solid fa-calendar" style="color: #e63d3d;"></i>&nbsp;&nbsp;Saturday: 10AM - 2PM (IST)</p>
+        </div>
+    </div>
+</body>
+
+</html>

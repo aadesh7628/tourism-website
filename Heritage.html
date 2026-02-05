@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heritage Places - Wanderlustways</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&family=PT+Sans+Narrow&family=Rubik:wght@300&display=swap"
+        rel="stylesheet">
+    <link rel="website icon" href="./images/wb logo.png">
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            font-family: 'Fira Sans', sans-serif;
+            font-family: 'PT Sans Narrow', sans-serif;
+            font-family: 'Rubik', sans-serif;
+                background-image: url("https://images.unsplash.com/photo-1524312966005-030e396636fd?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+        }
+        
+        .navbar {
+            width: 100%;
+            height: 74px;
+            z-index: 3;
+        }
+
+        .navbar li a img {
+            width: 200px;
+            height: auto;
+        }
+
+        #nav {
+            position: fixed;
+            top: 0%;
+            background-color: white;
+            box-shadow: 4px 4px 12px grey;
+        }
+
+        .navbar li {
+            display: inline;
+            margin-left: 20px;
+        }
+
+        #nav li a {
+            text-decoration: none;
+            color: black;
+            margin: 10px;
+            text-transform: uppercase;
+        }
+
+        #nav li :hover {
+            /* color: #fd8542; */
+            color: red;
+        }
+
+        .container {
+            width: 80%;
+            height: auto;
+            /* border: 1px solid black; */
+            margin-left: 9%;
+            margin-top: 100px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        
+        .box {
+            border: 1px solid rgb(227, 219, 219);
+            /* border-radius: 8px; */
+            box-shadow: 2px 2px 5px grey;
+            background-color: white;
+            width: 340px;
+            height: auto;
+            margin-bottom: 40px;
+        }
+
+        .image img {
+            width: 341px;
+            height: 230px;
+        }
+
+        .para,
+        .heading,
+        .btn {
+            padding-left: 12px;
+            padding-right: 12px;
+        }
+
+        .heading::first-letter{
+            color: red;
+        }
+
+        .btn button {
+            width: 100px;
+            height: 30px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 4px;
+            background-image: linear-gradient(to right, #ff433a, #ff577c);
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .btn button a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .btn button:hover{
+            transform: scale(1.1);
+        }
+
+        .box:nth-child(n+11){
+            visibility: hidden;
+        }
+
+        .footer {
+            width: 100%;
+            height: 27vh;
+            border-top: 1px solid rgb(182, 179, 179);
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 18px;
+            background-color: white;
+        }
+
+        .box4 img {
+            margin-top: 68px;
+        }
+
+        .box4 p {
+            font-size: 12px;
+        }
+
+        .box4 a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .box4 a:hover {
+            color: red;
+        }
+
+        .box4 h4 a {
+            color: rgb(31, 118, 217);
+        }
+        
+        .fa-facebook{
+            position: fixed;
+            right: 4px;
+            top: 400px;
+            font-size: 27px;
+            color: black;
+            cursor: pointer;
+        }
+
+        .fa-instagram{
+            position: fixed;
+            right: 4px;
+            top: 440px;
+            font-size: 27px;
+            color: black;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar" id="nav">
+        <ul>
+            <li><a href="#"><img src="./images/logo.png" alt="err"></a></li>
+            <li><a href="./home.html">Home</a></li>
+            <li><a href="./Heritage.html">Heritage Places</a></li>
+            <li><a href="./Gallery.html">Gallery</a></li>
+            <!-- <li><a href="#">Feedback</a></li> -->
+            <li><a href="./Hotels.html">Hotels</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <div class="box">
+            <div class="heading">
+                <h3>1. Jaganmohan Palace, Mysore</h3>
+            </div>
+            <div class="image">
+                <img src="https://lh3.googleusercontent.com/proxy/Bse8hV_2rXTsHbz6wIfx6HriuSo4Oi1hdifp7IJpALbfWVcho-gSH6qWgRqgmxkBkeOpsxXKGF55S5rdS9eF-gA79OPqv0z1ZBYY46Il9AH4pnMHlT2TQzzJfagNOmDbRw3C9Wlv6CBejQycz0zywvlXZXLkiQ=s680-w680-h510"
+                    alt="err">
+            </div>
+            <div class="para">
+                <p>Situated in the majestic city of Mysore, the Jaganmohan Palace is a spectacular edifice that has an
+                    illustrious history attached to its name. Built in the year 1869, it was used by the Wodeyars of
+                    Mysore
+                    when their main residence Amba Vilas Palace was under renovations post a fire accident.</p>
+
+            </div>
+            <div class="btn">
+                <button><a href="./1.html" target="_blank">Read More</a></button>
+            </div>
+        </div>
+        <div class="box">
+            <div class="heading">
+                <h3>2. Chamundeshwari Temple, Mysore</h3>
+            </div>
+            <div class="image">
+                <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/04/aa/dd/9e/chamundeswari-temple.jpg?w=1200&h=-1&s=1"
+                    alt="err">
+            </div>
+            <div class="para">
+                <p>The Chamundeshwari Temple is traditional Hindu temple located on the eastern edge of Mysore at the
+                    height of 1000ft on the Chamundi hills. Dedicated to and named after goddess Durga, the temple also
+                    has statues of Nandi and Mahishasura, the demon.</p>
+
+            </div>
+            <div class="btn">
+                <button><a href="./2.html" target="_blank">Read More</a></button>
+            </div>
+        </div>
+        <div class="box">
+            <div class="heading">
+                <h3>3. St. Philomena's Church, Mysore</h3>
+            </div>
+            <div class="image">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTR00lnly8PVKOghkZxERInYR1B5PD3xxNcjA&usqp=CAU"
+                    alt="err">
+            </div>
+            <div class="para">
+                <p>Recognized as the second tallest church of Asia, St. Philomena's Church was constructed to pay tribute to the Catholic Saint and martyr of Roman Catholic Church, Saint Philomena. It is one of the most important historical sites in Mysore.</p><br>
+            </div>
+            <div class="btn">
+                <button><a href="./3.html" target="_blank">Read More</a></button>
+            </div>
+        </div>
+        <div class="box">
+            <div class="heading">
+                <h3>4. Mysore Palace, Mysore</h3>
+            </div>
+            <div class="image">
+                <img src="https://karnatakatourism.org/wp-content/uploads/2020/06/Mysuru-Palace-banner-1920_1100.jpg"
+                    alt="err">
+            </div>
+            <div class="para">
+                <p>An incredibly breathtaking example of Indo - Saracenic style of architecture, the Mysore Palace is a magnificent edifice located in Mysore in the state of Karnataka. Also known as the Amba Vilas Palace, it is the former palace of the royal family of Mysore and is still their official residence. Referred to as the 'City of Palaces'.</p>
+            </div>
+            <div class="btn">
+                <button><a href="./4.html" target="_blank">Read More</a></button>
+            </div>
+        </div>
+        <div class="box">
+            <div class="heading">
+                <h3>5. Trinesvaraswamy Temple, Mysore</h3>
+            </div>
+            <div class="image">
+                <img src="https://media-cdn.tripadvisor.com/media/photo-s/0a/e4/b9/5b/entrance-or-gate-nb-clicks.jpg"
+                    alt="err">
+            </div>
+            <div class="para">
+                <p>This ancient temple is located outside the Mysore Fort, the main deity being Trinesvara i.e. the three eyed Shiva. The gopura of this temple was destroyed in the 18th century, but the beauty of the Dravidian architecture is still on display here.</p> <br>
+            </div>
+            <div class="btn">
+                <button><a href="./5.html" target="_blank">Read More</a></button>
+            </div>
+        </div>
+        <div class="box">
+            <div class="heading">
+                <h3>6. Somanathapura Temple, Mysore</h3>
+            </div>
+            <div class="image">
+                <img src="https://i0.wp.com/www.bharattemples.com/wp-content/uploads/bt/2018/12/Temple_at_Somnathpur_20180317143032.jpg?fit=1200%2C800&ssl=1"
+                    alt="err">
+            </div>
+            <div class="para">
+                <p>On the banks of Holy river Kaveri is a tiny tranquil town of Somanathapura. Here stands the finest and most exemplary monument of Hoysala architecture known as the famous Prasanna Chennakesava Temple. Consecrated in the year 1258 CE, it is a Vaishnav Hindu Temple dedicated to might and beauty of Lord Krishna.</p>
+            </div>
+            <div class="btn">
+                <button><a href="./6.html" target="_blank">Read More</a></button>
+            </div>
+        </div>
+        <div class="box">
+            <div class="heading">
+                <h3>7. Lalitha Mahal Palace, Mysore</h3>
+            </div>
+            <div class="image">
+                <img src="https://2.bp.blogspot.com/-mHQ_w0aa53Y/Vax2nLEDGvI/AAAAAAAAChQ/92SabsMyc-Y/s1600/Lalitha%2BMahal%2BPalace%2BReflection%2B3-4.jpg"
+                    alt="err">
+            </div>
+            <div class="para">
+                <p>Built in the year 1921, Lalitha Mahal is the second largest palace in Mysore. It was built at the orders of Maharaja Krishnaraja Wodeyar IV of Mysore for stay of the then Viceroy of India. The architecture of the grand palace was inspired by St. Paul? Cathedral in London, making it one of the most remarkable structure to grace the landscape of the city.</p>
+            </div>
+            <div class="btn">
+                <button><a href="./7.html" target="_blank">Read More</a></button>
+            </div>
+        </div>
+        <div class="box">
+            <div class="heading">
+                <h3>8. Nanjangud, Mysore</h3>
+            </div>
+            <div class="image">
+                <img src="https://media-cdn.tripadvisor.com/media/photo-s/11/30/dc/5a/nanjudeshwar-temple-mysore.jpg"
+                    alt="err">
+            </div>
+            <div class="para">
+                <p>Nanjangud also known as "Dakshina Kashi", is a town in Mysore of Karnataka that lies on the banks of the river Kapila, which is situated 23 km from Mysore. The temple is constructed in the Dravidian style of architecture and was built in 300-1000 CE during the reign of the Ganga dynasty. Later on, renovations were also done by the Hoysalas.</p>
+            </div>
+            <div class="btn">
+                <button><a href="./8.html" target="_blank">Read More</a></button>
+            </div>
+        </div>
+        <div class="box">
+            <div class="heading">
+                <h3>9. Srirangapatna</h3>
+            </div>
+            <div class="image">
+                <img src="https://revolvingcompass.com/wp/wp-content/uploads/2023/01/Srirangapatna_5.jpg"
+                    alt="err">
+            </div>
+            <div class="para">
+                <p>Srirangapatna is an egg-shaped island town amidst the Cauvery river in Mandya district of Karnataka. Situated at a distance of 18 kms from Mysore, the town is an architectural masterpiece of Hoysala and Vijayanagar styles. One of the most important Vaishnavite centres of pilgrimage, is the major attraction of the town which draws thousands of tourists.
+                </p>
+            </div>
+            <div class="btn">
+                <button><a href="./9.html" target="_blank">Read More</a></button>
+            </div>
+        </div>
+        <div class="box">
+            <div class="heading">
+                <h3>10. Melukote Temples, Mysore</h3>
+            </div>
+            <div class="image">
+                <img src="https://www.mysoreadda.com/wp-content/uploads/2022/05/mysore-to-melkote-cab.jpg"
+                    alt="err">
+            </div>
+            <div class="para">
+                <p>The two temples in Melukote are Tirunarayana temple and Yoga Narasimha, both located at the foothills and top respectively of the Yadavgiri hills.</p>
+            </div>
+            <div class="btn">
+                <button><a href="./10.html" target="_blank">Read More</a></button>
+            </div>
+        </div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+    <div class="footer">
+        <div class="box4">
+            <img src="./images/logo.png" alt="err" width="250px">
+        </div>
+        <div class="box4">
+            <h4>Explore Wanderlustways</h4>
+            <h5><a href="./home.html">Home</a></h5>
+            <h5><a href="/Heritage.html">Heritage Places</a></h5>
+            <h5><a href="./Gallery.html">Gallery</a></h5>
+            <h5><a href="./Hotels.html">Hotels</a></h5>
+        </div>
+        <div class="box4">
+            <h4>Need help with tour packages?</h4>
+            <h4><a href="./Form.html">Fill this form to get a callback</a></h4>
+            <p><i class="fa-solid fa-phone" style="color: #e63d3d;"></i>&nbsp;&nbsp;022-48934191</p>
+            <p><i class="fa-solid fa-envelope" style="color: #e63d3d;"></i>&nbsp;&nbsp;hello@Wanderlustways.com</p>
+            <p><i class="fa-solid fa-calendar" style="color: #e63d3d;"></i>&nbsp;&nbsp;Mon-Fri: 10AM - 7PM (IST)</p>
+            <p><i class="fa-solid fa-calendar" style="color: #e63d3d;"></i>&nbsp;&nbsp;Saturday: 10AM - 2PM (IST)</p>
+        </div>
+    </div>
+    <div class="social">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-instagram"></i>
+    </div>
+</body>
+
+</html>

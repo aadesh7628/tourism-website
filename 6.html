@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somanathapura Temple</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&family=PT+Sans+Narrow&family=Rubik:wght@300&display=swap"
+        rel="stylesheet">
+    <link rel="website icon" href="./images/wb logo.png">
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            font-family: 'Fira Sans', sans-serif;
+            font-family: 'PT Sans Narrow', sans-serif;
+            font-family: 'Rubik', sans-serif;
+            /* background-image: url("https://images.unsplash.com/photo-1524312966005-030e396636fd?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"); */
+        }
+
+        .navbar {
+            width: 100%;
+            height: 74px;
+            z-index: 3;
+        }
+
+        .navbar li a img {
+            width: 200px;
+            height: auto;
+        }
+
+        #nav {
+            position: fixed;
+            top: 0%;
+            background-color: white;
+            box-shadow: 4px 4px 12px grey;
+        }
+
+        .navbar li {
+            display: inline;
+            margin-left: 20px;
+        }
+
+        #nav li a {
+            text-decoration: none;
+            color: black;
+            margin: 10px;
+            text-transform: uppercase;
+        }
+
+        #nav li :hover {
+            /* color: #fd8542; */
+            color: red;
+        }
+
+        .container {
+            width: 80%;
+            height: auto;
+            /* border: 1px solid black; */
+            margin-left: 250px;
+            margin-top: 100px;
+            display: flex;
+            flex-direction: column;
+            /* justify-content: space-around; */
+            /* align-self: center; */
+            /* flex-wrap: wrap; */
+        }
+
+        #cont {
+            display: flex;
+            justify-content: flex-start;
+            margin-top: 20px;
+        }
+
+        .box {
+            /* border: 1px solid black4 */
+            width: 390px;
+            height: auto;
+            margin-left: 90px;
+        }
+
+        .heading,
+        .loc,
+        .rat {
+            padding: 7px;
+        }
+
+        .img img {
+            width: 80%;
+            /* height: 550px; */
+        }
+
+        .strong {
+            font-size: 20px;
+        }
+
+        .rat strong,
+        p {
+            display: inline;
+        }
+
+        .rat p {
+            font-size: 17px;
+        }
+
+        .checked {
+            font-size: 9px;
+            color: #ab3030;
+        }
+
+        .fa-star {
+            font-size: 9px;
+        }
+
+        .box1 {
+            width: 390px;
+            height: auto;
+            /* margin-left: 20px; */
+            padding: 5px 12px 5px 22px;
+            /* border: 0px solid black; */
+            background-color: rgb(194, 234, 248);
+        }
+
+        .box1 strong,
+        p {
+            display: inline-block;
+            margin-bottom: 6px;
+        }
+
+        .box1 a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .box1 a:hover {
+            color: red;
+        }
+
+        .box1 p a {
+            color: rgb(31, 118, 217);
+        }
+
+        .box2 {
+            width: 1000px;
+            height: 400px;
+            /* border: 1px solid black; */
+        }
+
+        .footer {
+            width: 100%;
+            height: 27vh;
+            border-top: 1px solid rgb(182, 179, 179);
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 18px;
+            background-color: white;
+        }
+
+        .footer .box4 img {
+            margin-top: 68px;
+        }
+
+        .footer .box4 p {
+            font-size: 12px;
+        }
+
+        .footer .box4 a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .footer .box4 a:hover {
+            color: red;
+        }
+
+        .footer .box4 h4 a {
+            color: rgb(31, 118, 217);
+        }
+
+        .fa-facebook {
+            position: fixed;
+            right: 4px;
+            top: 400px;
+            font-size: 27px;
+            color: black;
+            cursor: pointer;
+        }
+
+        .fa-instagram {
+            position: fixed;
+            right: 4px;
+            top: 440px;
+            font-size: 27px;
+            color: black;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar" id="nav">
+        <ul>
+            <li><a href="#"><img src="./images/logo.png" alt="err"></a></li>
+            <li><a href="./home.html">Home</a></li>
+            <li><a href="./Heritage.html">Heritage Places</a></li>
+            <li><a href="./Gallery.html">Gallery</a></li>
+            <!-- <li><a href="#">Feedback</a></li> -->
+            <li><a href="./Hotels.html">Hotels</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <div class="img">
+            <img src="https://www.karnataka.com/wp-content/uploads/2011/07/Keshava-Temple-Somanathapura.jpg"
+                alt="err">
+        </div>
+        <div id="cont">
+            <div class="box">
+                <div class="heading">
+                    <strong class="strong">Somanathapura Temple</strong>
+                </div>
+                <div class="loc">
+                    <p><i class="fa-solid fa-location-dot" style="color: #ab3030;"></i>&nbsp; Mysore &nbsp;
+                        <strong>.</strong> &nbsp;
+                        Karnataka</p>
+                </div>
+                <div class="rat">
+                    <strong class="strong">#4</strong> &nbsp;
+                    <p>Among Things To Do in Mysore</p><br>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star "></span>
+                    <span class="fa fa-star "></span>
+                </div>
+            </div>
+            <div class="box1">
+                <strong>Weather :</strong> 
+                <p>19 - 29°C</p> <br>
+                <strong>Label :</strong>
+                <p>Must Visit</p><br>
+                <strong>Tags :</strong>
+                <p>Temple</p><br>
+                <strong>Timings :</strong>
+                <p> 9:00 AM - 5:30 PM</p><br>
+                <strong>Time Required :</strong>
+                <p>1-2 hrs </p><br>
+                <strong>Entry Fee :</strong>
+                <p>Indians: INR 20 (Cashless Payment),<br> INR 25 (Cash Payment),<br>
+                    Foreign Nationals: INR 250 (Cashless Payment) INR 300 (Cash Payment),<br>
+                    Children (Up to 12 years): No entry fee <br>
+                    Videography: INR 25</p><br>
+                <strong>Planning a Trip?</strong>
+                <p><a href="">Ask Your Question</a></p><br>
+                <strong>Looking for a hotel?</strong>
+                <p><a href="./Hotels.html">Click here</a></p><br>
+            </div>
+
+        </div>
+        <div class="box2">
+            <h2>Somanathapura Temple, Mysore Overview</h2>
+            <p>
+                On the banks of Holy river Kaveri is a tiny tranquil town of Somanathapura. Here stands the finest and most exemplary monument of Hoysala architecture known as the famous Prasanna Chennakesava Temple or simply the Kesava Temple. Consecrated in the year 1258 CE, it is a Vaishnav Hindu Temple dedicated to might and beauty of Lord Krishna (Chenna= Beautiful and Kesava= Krishna). Tourists from near and far come to visit the temple to get a view of the beautiful place. The Chennakesava temple is one of the 1500 Temples built by the Hoysala Empire kings in different parts of their kingdom, and is said to be the climax development in Hoysala temple style and yet is unique in many other ways. 
+            </p>
+            <p>
+                A classic example of the famous Hoysala architecture, and is one of the three temples of the kind to be nominated in the Unesco World Heritage list. Unfortunately, this temple is no longer used as a place of worship because the idols have been broken and desecrated by the invading Muslim armies. However, the beauty of the temple still charms thousands of visitors who visit the site to witness the magnificent artistic and engineering achievements of the era, to seek the Lord's blessing and admire the delicate carvings and sculptures, whose beauty is unequal and as unique as the God that it houses.
+            </p>
+        </div>
+    </div>
+    <div class="social">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-instagram"></i>
+    </div>
+    <div class="footer">
+        <div class="box4">
+            <img src="./images/logo.png" alt="err" width="250px">
+        </div>
+        <div class="box4">
+            <h4>Explore Wanderlustways</h4>
+            <h5><a href="./home.html">Home</a></h5>
+            <h5><a href="./Heritage.html">Heritage Places</a></h5>
+            <h5><a href="./Gallery.html">Gallery</a></h5>
+            <h5><a href="./Hotels.html">Hotels</a></h5>
+        </div>
+        <div class="box4">
+            <h4>Need help with tour packages?</h4>
+            <h4><a href="./Form.html">Fill this form to get a callback</a></h4>
+            <p><i class="fa-solid fa-phone" style="color: #e63d3d;"></i>&nbsp;&nbsp;022-48934191</p> <br>
+            <p><i class="fa-solid fa-envelope" style="color: #e63d3d;"></i>&nbsp;&nbsp;hello@Wanderlustways.com</p> <br>
+            <p><i class="fa-solid fa-calendar" style="color: #e63d3d;"></i>&nbsp;&nbsp;Mon-Fri: 10AM - 7PM (IST)</p>
+            <br>
+            <p><i class="fa-solid fa-calendar" style="color: #e63d3d;"></i>&nbsp;&nbsp;Saturday: 10AM - 2PM (IST)</p>
+            <br>
+        </div>
+    </div>
+</body>
+
+</html>
